@@ -61,17 +61,34 @@ public class Buscaminas {
             for(int i = 0; i <filas ; i++){
                 for(int j = 0; j <columnas ; j++){
                     if(matriz[i][j]==-1 && i> 0 && j> 0 && i<filas-1 && j<columnas-1){
-                        matriz[i-1][j-1]++;
-                        matriz[i-1][j]++;
-                        matriz[i-1][j+1]++;
-                        matriz[i][j-1]++;
-                        matriz[i][j+1]++;
-                        matriz[i+1][j-1]++;
-                        matriz[i+1][j]++;
-                        matriz[i+1][j+1]++;
+                        if(!(matriz[i-1][j-1]==-1)){
+                            matriz[i-1][j-1]++;
+                        }
+                        if(!(matriz[i-1][j]==-1)){
+                            matriz[i-1][j]++;
+                        }
+                        if(!(matriz[i-1][j+1]==-1)){
+                            matriz[i-1][j+1]++;
+                        }
+                        if(!(matriz[i][j-1]==-1)){
+                            matriz[i][j-1]++;
+                        }
+                        if(!(matriz[i][j+1]==-1)){
+                            matriz[i][j+1]++;
+                        }
+                        if(!(matriz[i+1][j-1]==-1)){
+                            matriz[i+1][j-1]++;
+                        }
+                        if(!(matriz[i+1][j]==-1)){
+                            matriz[i+1][j]++;
+                        }
+                        if(!(matriz[i+1][j+1]==-1)){
+                            matriz[i+1][j+1]++;
+                        }
                     }
                 }
             }
+            
             //imprimir la matriz principal
             for(int i = 0; i <filas ; i++){
                 for(int j = 0; j <columnas ; j++){
